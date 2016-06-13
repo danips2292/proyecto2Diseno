@@ -8,6 +8,9 @@ package amortizationsystem;
  *
  * @author familia
  */
-public class IController {
-    
+public interface IController {
+        
+    public void ShowLoanData(LoanDTO loan);;
+    public void Start();
+    public LoanDTO getLoanDTO();
 }
