@@ -12,9 +12,9 @@ public abstract class AmortizationTableBuilder {
     
     protected ExchangeRate exchangeRate;
     protected AmortizationTable amortizationTable;
-    protected AmortizationSystemStrategy strategy;
+    //protected AmortizationSystemStrategy strategy;
     
-    public abstract void buildTable(AmortizationSystemType system);
+    public abstract void buildTable(LoanDTO loan);
     public abstract AmortizationTable getAmortizationTable();
     
     

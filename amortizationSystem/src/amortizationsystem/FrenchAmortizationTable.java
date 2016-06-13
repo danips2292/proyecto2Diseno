@@ -3,23 +3,77 @@
  * and open the template in the editor.
  */
 package amortizationsystem;
-
 /**
  *
  * @author familia
  */
 public class FrenchAmortizationTable extends AmortizationTableBuilder {
     
-    public FrenchAmortizationTable()
-    {
-        this.strategy = new FrenchStrategy();
-    }
     @Override
-    public void buildTable(AmortizationSystemType system)
+    public void buildTable(LoanDTO loan)
     {
-        amortizationTable.setInitialDept(strategy.CalculateInitialDept());
+
     }
     @Override
     public AmortizationTable getAmortizationTable(){ return amortizationTable;}
     
+    public void CalculateFees(int term, double initialDept, float anualInterest)
+    {
+        double interestRate = (double)(anualInterest / 100);
+        double fee = initialDept*((interestRate *(Math.pow((1 + interestRate),term)))/((Math.pow((1+interestRate),term))-1));
+        double feeTotal = 0;
+        
+        for(int termCounter = 0; termCounter < term; termCounter++)
+        {
+          amortizationTable.getFees().add(fee);
+          feeTotal += fee;
+        }
+        amortizationTable.getFees().add(feeTotal);
+    }
+    
+    public void CalculateInterests(int term, float anualInterest)
+    {
+        double interestRate = (double)(anualInterest / 100);
+        double initialFee =  amortizationTable.getFees().get(0);
+        double currentInterest;
+        double interestsTotal = 0;
+        
+        for(int termCounter = 0; termCounter < term; termCounter++)
+        {  
+            currentInterest = initialFee*(1-(1/(Math.pow((1+interestRate),(term+1-(termCounter+1))))));
+            amortizationTable.getInterests().add(currentInterest);
+            interestsTotal += currentInterest;
+        }
+        amortizationTable.getInterests().add(interestsTotal);
+    }   
+    
+    public void CalculateAmortizationFee(int term, float anualInterest)
+    {
+      
+        double interestRate = (double)(anualInterest / 100);
+        double initialFee =  amortizationTable.getFees().get(0);
+        double currentFee;
+        double amortizationFeeTotal = 0;
+        
+        for(int termCounter = 0 ; termCounter < term ; termCounter++)
+        {
+            currentFee = initialFee / Math.pow((1 + interestRate),(term+1-(termCounter+1)));
+            amortizationTable.getAmortizationFees().add(currentFee);
+            amortizationFeeTotal += currentFee; 
+        }
+        amortizationTable.getAmortizationFees().add(amortizationFeeTotal);
+    }
+    
+    public void CalculateDepts(int term, double initialDept)
+    {   
+        double currentDept = initialDept;
+        double currentAmortizationFee;
+        for(int termCounter = 0; termCounter < term; termCounter++)
+        {
+          currentAmortizationFee = amortizationTable.getAmortizationFees().get(termCounter);
+          amortizationTable.getDepts().add(initialDept);
+          currentDept -= currentAmortizationFee;
+        }
+    } 
+
 }

@@ -12,42 +12,48 @@ import java.util.ArrayList;
  */
 public class AmortizationTable {
     
-    private ArrayList<Integer> term = new ArrayList<Integer>();
-    private ArrayList<Double> initialDept = new ArrayList<Double>();
-    private ArrayList<Float> interests = new ArrayList<Float>();
-    private ArrayList<Double> fee = new  ArrayList<Double>();
+    private ArrayList<Double> depts = new ArrayList<Double>();
+    private ArrayList<Double> interests = new ArrayList<Double>();
+    private ArrayList<Double> fees = new  ArrayList<Double>();
+    private ArrayList<Double> amortizationFees = new  ArrayList<Double>();
 
-    public ArrayList<Integer> getTerm() {
-        return term;
+    public AmortizationTable(double amount)
+    {
+        this.getDepts().add(amount);
+    }
+    
+    public ArrayList<Double> getDepts() {
+        return depts;
     }
 
-    public void setTerm(ArrayList<Integer> term) {
-        this.term = term;
+    public void setDepts(ArrayList<Double> depts) {
+        this.depts = depts;
     }
 
-    public ArrayList<Double> getInitialDept() {
-        return initialDept;
-    }
-
-    public void setInitialDept(ArrayList<Double> initialDept) {
-        this.initialDept = initialDept;
-    }
-
-    public ArrayList<Float> getInterests() {
+    public ArrayList<Double> getInterests() {
         return interests;
     }
 
-    public void setInterests(ArrayList<Float> interests) {
+    public void setInterests(ArrayList<Double> interests) {
         this.interests = interests;
     }
 
-    public ArrayList<Double> getFee() {
-        return fee;
+    public ArrayList<Double> getFees() {
+        return fees;
     }
 
-    public void setFee(ArrayList<Double> fee) {
-        this.fee = fee;
+    public void setFees(ArrayList<Double> fees) {
+        this.fees = fees;
     }
+
+    public ArrayList<Double> getAmortizationFees() {
+        return amortizationFees;
+    }
+
+    public void setAmortizationFees(ArrayList<Double> amortizationFees) {
+        this.amortizationFees = amortizationFees;
+    }
+
     
     
 }
