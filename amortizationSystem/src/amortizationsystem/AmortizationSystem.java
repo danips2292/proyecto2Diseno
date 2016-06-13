@@ -15,7 +15,12 @@ public class AmortizationSystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ConsoleView view = new ConsoleView();
-        view.getUserInput();
+        ConsoleController view = new ConsoleController();
+        Bank bank = new Bank();
+        bank.setInterface(view);
+        bank.StartInterface();
+        bank.getLoanFromClient();
+        bank.processLoan();
+        bank.showLoanData();
     }
 }
