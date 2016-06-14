@@ -34,13 +34,16 @@ public class GUIController implements IController, GUIObserver {
 
     @Override
     public LoanDTO getLoanDTO() {
-            return this.inputLoan;
+        while (inputReceived == false){
+            System.out.println("Awaiting GUI...");
+        }
+        return this.inputLoan;
     }
     
 
     @Override
     public void infoReceived(ViewGetUserGUI view1){
-        inputReceived = true;
+        
         ArrayList<String> values = view1.getValues();
         LoanDTO loan = new LoanDTO();
         loan.setOwner(values.get(0));
@@ -50,6 +53,7 @@ public class GUIController implements IController, GUIObserver {
         loan.setAmortizationSystem(values.get(4));
         loan.setCurrency(values.get(5));     
         this.inputLoan = loan;
+        inputReceived = true;
     }
     
 

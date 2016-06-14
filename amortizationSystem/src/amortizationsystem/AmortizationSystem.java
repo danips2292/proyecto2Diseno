@@ -19,5 +19,7 @@ public class AmortizationSystem {
         GUIController controller = new GUIController();
         bank.setInterface(controller);
         bank.startInterface();
+        bank.getLoanFromClient();
+
     }   
 }

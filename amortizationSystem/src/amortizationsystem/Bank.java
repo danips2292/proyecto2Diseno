@@ -25,6 +25,7 @@ public class Bank {
     
     public void getLoanFromClient()
     {
+        
         this.loan = this.userInterface.getLoanDTO();
     }
     
