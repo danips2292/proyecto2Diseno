@@ -12,6 +12,6 @@ package amortizationsystem;
 public abstract class ResourceManager{
     
     
-    public abstract void getResource();
+    public abstract String getResource();
     
 }//End Class

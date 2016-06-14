@@ -22,7 +22,10 @@ public class ChuckyEnd extends ResourceManager{
     //Atributes
     private String chuckyTime;
     
-    public void getResource(){
+    @Override
+    public String getResource(){
+        
+        String date;
         
         final String host = "localhost";
         final int portNumber = 8666;
@@ -34,7 +37,7 @@ public class ChuckyEnd extends ResourceManager{
                 BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 
-                System.out.println(br.readLine());
+                date = br.readLine();
                 
                 this.setChuckyTime(br.readLine());
                 
@@ -45,6 +48,9 @@ public class ChuckyEnd extends ResourceManager{
             }//End try
             
         }// End While
+        
+        return date;
+        
     }//End Method
 
     /**
