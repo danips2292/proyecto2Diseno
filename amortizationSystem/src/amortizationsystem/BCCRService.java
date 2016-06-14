@@ -8,7 +8,11 @@ package amortizationsystem;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.URL;
+import javax.xml.parsers.*;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 
 /**
  *
@@ -16,11 +20,14 @@ import java.net.URL;
  */
 public class  BCCRService extends BCCRServiceAdapter{
     
-    private double exchangeRate;
+    private double exchangeSaleRate;
+    private double exchangeBuyRate;
     
+    // 317-Compra de Dolares 318-Venta de Dolares
+    public String method(String pIndicador, String pFechaInicio, String pFechaFinal){
     
-    public void method(String pIndicador, String pFechaInicio, String pFechaFinal){
-    
+        StringBuffer response = new StringBuffer();
+        
         try {
         
         String url = 
@@ -34,7 +41,7 @@ public class  BCCRService extends BCCRServiceAdapter{
         InputStreamReader isr = new InputStreamReader(is, "UTF-8");
         BufferedReader br = new BufferedReader(isr);
         
-        StringBuffer response = new StringBuffer();
+        
         String nextLineFromService = br.readLine();
         while (nextLineFromService != null) {
             response.append(nextLineFromService);
@@ -47,6 +54,25 @@ public class  BCCRService extends BCCRServiceAdapter{
             System.out.println(e);
         }//End try
         
+        return response.toString();
+        
     }//End Method
+    
+    public void openXML(String xmlString){
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();  
+        DocumentBuilder builder;  
+        Document document=null;
+        try{  
+            builder = factory.newDocumentBuilder();  
+            document = builder.parse( new InputSource( new StringReader( xmlString ) ) );  
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        } 
+        
+        System.out.println(document);
+        
+        
+    }//End method
     
 }//Class End

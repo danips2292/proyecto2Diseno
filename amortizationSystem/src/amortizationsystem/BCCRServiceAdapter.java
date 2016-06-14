@@ -11,6 +11,8 @@ package amortizationsystem;
  */
 public class BCCRServiceAdapter extends ResourceManager {
     
-    public void getResource(){}
+    public void getResource(){
+    
+    }//end method
     
 }//Class End
