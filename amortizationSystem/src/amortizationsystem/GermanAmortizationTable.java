@@ -37,10 +37,13 @@ public class GermanAmortizationTable extends AmortizationTableBuilder {
     
     public void setTableAmortizationFees(int term, double amortizationFee)
     {
+        double finalAmortizationFee = 0;
         for(int termCounter = 0 ; termCounter < term ; termCounter++)
         {
             amortizationTable.getAmortizationFees().add(amortizationFee);
+            finalAmortizationFee += amortizationFee;
         }
+        amortizationTable.getAmortizationFees().add(finalAmortizationFee);
     }
     
     public void CalculateDepts(int term)
@@ -49,7 +52,7 @@ public class GermanAmortizationTable extends AmortizationTableBuilder {
         double amortizationFee = amortizationTable.getAmortizationFees().get(0);
         double nextDept;
         
-        for(int termCounter = 0; termCounter < term; termCounter++)
+        for(int termCounter = 0; termCounter < term - 1; termCounter++)
         {
           previousDept = (double)amortizationTable.getDepts().get(termCounter);
           nextDept = previousDept - amortizationFee;
@@ -63,12 +66,15 @@ public class GermanAmortizationTable extends AmortizationTableBuilder {
         double currentDept;
         double deptInterest;
         double interestRate = (double)anualInterest;
+        double finalInterest = 0;
         for(int termCounter = 0; termCounter < term; termCounter++)
         {
             currentDept = amortizationTable.getDepts().get(termCounter);
             deptInterest = (double)(currentDept*(interestRate / 100));  
             amortizationTable.getInterests().add(deptInterest);
+            finalInterest += deptInterest;
         }
+        amortizationTable.getInterests().add(finalInterest);
     }
 
     public void CalculateFees(int term)
@@ -76,13 +82,15 @@ public class GermanAmortizationTable extends AmortizationTableBuilder {
         double fee;
         double debtInterest;
         double amortizationFee = amortizationTable.getAmortizationFees().get(0);
-        
+        double finalFee = 0;
         for(int termCounter = 0; termCounter < term; termCounter++)
         {
           debtInterest = (double)amortizationTable.getInterests().get(termCounter);
           fee = amortizationFee + debtInterest;
           amortizationTable.getFees().add(fee);
+          finalFee += fee;
         }
+        amortizationTable.getFees().add(finalFee);
     }
     
 }

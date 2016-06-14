@@ -117,6 +117,6 @@ public class ConsoleView {
                 "Term In Years: " + loan.getTerm() + "\n" +
                 "Interest Rate: " + loan.getAnualInterest() + "\n" +
                 "System: " + loan.getAmortizationSystem() + "\n" +
-                "Currency: " + loan.getCurrency());
+                "Currency: " + loan.getCurrency() + "\n" + loan.getTable().toString(loan.getTerm()));
     }
 }
