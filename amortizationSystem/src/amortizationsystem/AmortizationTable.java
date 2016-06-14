@@ -58,15 +58,18 @@ public class AmortizationTable {
     public String toString(int term)
     {
         String header = "Amortization Table\n";
-        String rowTags = "Term k\t\tInitialDept\t\tInterests(sk)\t\tAmortization(vk)\t\tFee(ck)";
+        String rowTags = "\nTerm k\t\tInitialDept\t\tInterests(sk)\t\tAmortization(vk)\tFee(ck)";
         String values = "";
         String tableString = "";
         String total = "\ntotal\t\t\t\t\t" + interests.get(term) + "\t\t" + amortizationFees.get(term) + "\t\t" + fees.get(term);
         for(int termCounter = 0; termCounter < term; termCounter++)
         {
-            values.concat("\n" + (termCounter+1) + "\t\t" + depts.get(termCounter) + "\t\t" + interests.get(termCounter)
-                          + "\t\t" + amortizationFees.get(termCounter)+ "\t\t" + fees.get(termCounter));  
+   
+            values = values.concat("\n" + (termCounter+1) + "\t\t" + depts.get(termCounter) +
+                                   "\t\t" + interests.get(termCounter)+ "    \t\t" + amortizationFees.get(termCounter)+
+                                   "\t\t" + fees.get(termCounter));  
         }
+        //System.out.print(values);
         tableString = header + rowTags + values + total;
         return tableString; 
     }

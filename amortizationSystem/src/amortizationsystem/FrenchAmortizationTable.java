@@ -12,7 +12,14 @@ public class FrenchAmortizationTable extends AmortizationTableBuilder {
     @Override
     public void buildTable(LoanDTO loan)
     {
-
+        int term = loan.getTerm();
+        double initialDept = loan.getAmount();
+        float interestRate = loan.getAnualInterest();
+        amortizationTable = new AmortizationTable(loan.getAmount());
+        CalculateFees(term, initialDept, interestRate);
+        CalculateInterests(term,interestRate);
+        CalculateAmortizationFee(term, interestRate);
+        CalculateDepts(term, initialDept);
     }
     @Override
     public AmortizationTable getAmortizationTable(){ return amortizationTable;}
@@ -68,11 +75,12 @@ public class FrenchAmortizationTable extends AmortizationTableBuilder {
     {   
         double currentDept = initialDept;
         double currentAmortizationFee;
-        for(int termCounter = 0; termCounter < term; termCounter++)
+        for(int termCounter = 0; termCounter < term - 1; termCounter++)
         {
           currentAmortizationFee = amortizationTable.getAmortizationFees().get(termCounter);
-          amortizationTable.getDepts().add(initialDept);
           currentDept -= currentAmortizationFee;
+          amortizationTable.getDepts().add(currentDept);
+          
         }
     } 
 
