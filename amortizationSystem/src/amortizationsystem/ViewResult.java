@@ -19,6 +19,9 @@ public class ViewResult extends javax.swing.JFrame {
         this.lblAmount.setText(Double.toString(loan.getAmount()));
         this.lblInterestRate.setText(Float.toString(loan.getAnualInterest()));
         this.lblAmount.setText(Double.toString(loan.getAmount()));
+        this.lblMoneda.setText(loan.getCurrency());
+        this.lblName.setText(loan.getOwner());
+        /*this.lblresult.setText(loan.ge);*/
         
     }
 
@@ -33,7 +36,7 @@ public class ViewResult extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        lblresult = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -52,9 +55,9 @@ public class ViewResult extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Resultado del Banco ");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        lblresult.setColumns(20);
+        lblresult.setRows(5);
+        jScrollPane1.setViewportView(lblresult);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Nombre");
@@ -99,7 +102,7 @@ public class ViewResult extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -204,12 +207,12 @@ public class ViewResult extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblAmount;
     private javax.swing.JLabel lblInterestRate;
     private javax.swing.JLabel lblLoanType;
     private javax.swing.JLabel lblMoneda;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblTerm;
+    private javax.swing.JTextArea lblresult;
     // End of variables declaration//GEN-END:variables
 }
