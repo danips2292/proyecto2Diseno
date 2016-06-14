@@ -13,9 +13,11 @@ public class AmortizationSystem {
     /**
      * @param args the command line arguments
      */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
-        ConsoleView view = new ConsoleView();
-        view.getUserInput();
-    }
+        Bank bank = new Bank();
+        GUIController controller = new GUIController();
+        bank.setInterface(controller);
+        bank.startInterface();
+    }   
 }

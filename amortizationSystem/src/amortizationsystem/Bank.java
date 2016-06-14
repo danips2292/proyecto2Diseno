@@ -18,7 +18,7 @@ public class Bank {
     {
         this.userInterface = pInterface;
     }
-    public void StartInterface()
+    public void startInterface()
     {
         this.userInterface.Start();
     }
