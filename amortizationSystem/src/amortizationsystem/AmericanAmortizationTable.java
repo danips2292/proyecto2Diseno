@@ -28,7 +28,7 @@ public class AmericanAmortizationTable extends AmortizationTableBuilder {
     
     public void CalculateDepts(int term, double initialDept)
     {   
-        for(int termCounter = 0; termCounter < term; termCounter++)
+        for(int termCounter = 1; termCounter < term; termCounter++)
         {
           amortizationTable.getDepts().add(initialDept);
         }
@@ -69,14 +69,16 @@ public class AmericanAmortizationTable extends AmortizationTableBuilder {
     {
         double interest;
         double amortization;
-        double finalFee;
+        double fee;
+        double finalFee = 0;
       
-        for(int termCounter = 0; termCounter < term; termCounter++)
+        for(int termCounter = 0; termCounter <= term; termCounter++)
         {
           interest = amortizationTable.getInterests().get(termCounter);
           amortization = amortizationTable.getAmortizationFees().get(termCounter);
-          finalFee = interest + amortization;
-          amortizationTable.getFees().add(finalFee);
+          fee = interest + amortization;
+          amortizationTable.getFees().add(fee);
         }
+        
     }
 }

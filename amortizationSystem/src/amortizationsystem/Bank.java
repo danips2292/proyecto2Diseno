@@ -13,6 +13,7 @@ public class Bank {
     private IController userInterface;;
     private LoanDTO loan;
     AmortizationTableBuilder tableBuilder;
+    AmortizationTable table;
     
     public void setInterface(IController pInterface)
     {
@@ -33,8 +34,12 @@ public class Bank {
     {
         this.userInterface.ShowLoanData(loan);
     }
-    
-    public void createAmortizationTable(LoanDTO loanDTO)
+    public void processLoan()
+    {
+        buildAmortizationTable(loan);
+        setAmortizationTable();
+    }
+    public void buildAmortizationTable(LoanDTO loanDTO)
     {
         String amortizationSystem = loanDTO.getAmortizationSystem();
         
@@ -52,5 +57,12 @@ public class Bank {
             default:
                 System.out.println("Invalid System");
         }
+        
+        tableBuilder.buildTable(loanDTO);
+    }
+    
+    public void setAmortizationTable()
+    {
+        this.loan.setTable( this.tableBuilder.getAmortizationTable());
     }
 }

@@ -6,7 +6,7 @@
 package amortizationsystem;
 
 import java.util.ArrayList;
-import javafx.beans.Observable;
+//import javafx.beans.Observable;
 
 /**
  *

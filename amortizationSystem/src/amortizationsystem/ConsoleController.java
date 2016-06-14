@@ -13,6 +13,11 @@ public class ConsoleController implements IController {
     LoanDTO loanDTO;
     ConsoleView consoleView;
     
+    public ConsoleController()
+    {
+        this.consoleView = new ConsoleView();
+    }
+    
     @Override
     public void Start()
     {

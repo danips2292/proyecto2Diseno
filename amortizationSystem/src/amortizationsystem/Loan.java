@@ -16,6 +16,7 @@ public class Loan {
     private float anualInterest;
     private String amortizationSystem;
     private String currency;
+    private AmortizationTable table;
 
     public String getOwner() {
         return owner;
@@ -63,6 +64,14 @@ public class Loan {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public AmortizationTable getTable() {
+        return table;
+    }
+
+    public void setTable(AmortizationTable table) {
+        this.table = table;
     }
     
     
