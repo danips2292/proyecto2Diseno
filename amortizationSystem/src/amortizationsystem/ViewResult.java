@@ -18,10 +18,11 @@ public class ViewResult extends javax.swing.JFrame {
         initComponents();
         this.lblAmount.setText(Double.toString(loan.getAmount()));
         this.lblInterestRate.setText(Float.toString(loan.getAnualInterest()));
-        this.lblAmount.setText(Double.toString(loan.getAmount()));
+        this.lblTerm.setText(Integer.toString(loan.getTerm()));
         this.lblMoneda.setText(loan.getCurrency());
         this.lblName.setText(loan.getOwner());
-        /*this.lblresult.setText(loan.ge);*/
+        this.lblLoanType.setText(loan.getAmortizationSystem());
+        this.lblresult.setText(loan.getTable().toString(loan.getTerm()));
         
     }
 
