@@ -2,7 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.Controller;
+
+import amortizationsystem.View.ConsoleView;
+import amortizationsystem.Model.LoanDTO;
+import amortizationsystem.Model.BCCRServiceAdapter;
+import amortizationsystem.Model.ChuckyEnd;
 
 /**
  *

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.View;
 
+import amortizationsystem.Controller.GUIController;
 import java.util.ArrayList;
 
 /**

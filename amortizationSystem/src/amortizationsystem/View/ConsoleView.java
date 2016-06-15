@@ -2,8 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.View;
 
+import amortizationsystem.Model.LoanDTO;
 import java.io.BufferedReader;
 import java.io.Console;
 import java.io.IOException;

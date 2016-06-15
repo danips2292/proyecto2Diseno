@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.Model;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author familia
  */
-public class Loan {
+public class LoanDTO {
     
     private String owner;
     private double amount;
@@ -21,17 +21,9 @@ public class Loan {
     private AmortizationTable table;
     private ArrayList<ResourceManager> resourceManagerList;
     
-    public Loan(){
+    public LoanDTO(){
         this.resourceManagerList = new ArrayList();
-        
-        ChuckyEnd chuckyEnd= new ChuckyEnd();
-        BCCRServiceAdapter bccrService = new BCCRServiceAdapter();
-        
-        this.resourceManagerList.add(chuckyEnd);
-        this.resourceManagerList.add(bccrService);
-        
     }
-    
     
     public String getOwner() {
         return owner;
@@ -80,13 +72,19 @@ public class Loan {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
-
+    
     public AmortizationTable getTable() {
         return table;
     }
 
     public void setTable(AmortizationTable table) {
         this.table = table;
-    }    
-        
+    }
+
+    public ArrayList<ResourceManager> getResourceManagerList() {
+        return resourceManagerList;
+    }
+     
+   
+   
 }
