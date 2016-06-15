@@ -5,16 +5,11 @@
  */
 package amortizationsystem;
 
-//import com.opencsv.CSVWriter;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -47,7 +42,7 @@ public class CSVFileStrategy implements SaveStrategy {
         PrintWriter csvWriter;
         try
             {
-                String filePath= "C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\CSVFile.csv";
+                String filePath= "\\amortizationSystem\\CSVFile.csv";
                 //File file = new File(strFilePath);
                 //String filePath = new File("").getPath();
                 //filePath.concat("CSVFile.csv");

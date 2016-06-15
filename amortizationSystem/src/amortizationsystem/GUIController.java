@@ -21,7 +21,8 @@ public class GUIController implements IController, GUIObserver {
     
     @Override
     public void ShowLoanData(LoanDTO loan) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ViewResult result = new ViewResult(loan);
+        result.setVisible(true);
     }
 
     @Override
