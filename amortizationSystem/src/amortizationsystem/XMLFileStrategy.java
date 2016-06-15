@@ -28,93 +28,7 @@ import org.xml.sax.SAXException;
 public class XMLFileStrategy implements SaveStrategy{
     
     @Override
-    public String createFile(String datos) {
-        
-        /*try {
-
-          DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-          DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-          // elemento raiz
-          Document doc = docBuilder.newDocument();
-          Element rootElement = doc.createElement("compania");
-          doc.appendChild(rootElement);
-
-          // empleado
-          Element empleado = doc.createElement("empleado");
-          rootElement.appendChild(empleado);
-
-          // atributo del elemento empleado
-          Attr attr = doc.createAttribute("id");
-          attr.setValue("1");
-          empleado.setAttributeNode(attr);
-
-          // nombre
-          Element nombre = doc.createElement("nombre");
-          nombre.appendChild(doc.createTextNode("Daniel"));
-          empleado.appendChild(nombre);
-
-          // apellidos
-          Element apellidos = doc.createElement("appellidos");
-          apellidos.appendChild(doc.createTextNode("Pacheco"));
-          empleado.appendChild(apellidos);
-
-          // seccion
-          Element seccion = doc.createElement("seccion");
-          seccion.appendChild(doc.createTextNode("Archivos"));
-          empleado.appendChild(seccion);
-
-          // salario
-          Element salario = doc.createElement("salario");
-          salario.appendChild(doc.createTextNode("5000"));
-          empleado.appendChild(salario);
-          
-          NodeList rootList = doc.getElementsByTagName("compania");
-          Node root = rootList.item(0);
-          
-          Element user = doc.createElement("holaaaaa");
-          root.appendChild(user);
-          // append nuevo user
-          /*Element dataTag = doc.getDocumentElement();
-          Element peopleTag =  (Element) dataTag.getElementsByTagName("compania").item(0);
-
-          Element newPerson = doc.createElement("person");
-
-          Element firstName = doc.createElement("firstName");
-          firstName.setTextContent("Tom");
-
-          Element lastName = doc.createElement("lastName");
-          lastName.setTextContent("Hanks");
-
-          newPerson.appendChild(firstName);
-          newPerson.appendChild(lastName);
-
-          peopleTag.appendChild(newPerson);*/
-          
-          // escribimos el contenido en un archivo .xml
-          /*TransformerFactory transformerFactory = TransformerFactory.newInstance();
-          Transformer transformer = transformerFactory.newTransformer();
-          DOMSource source = new DOMSource(doc);
-          StreamResult result = new StreamResult(new File("C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\XMLFile.csv"));
-          //StreamResult result = new StreamResult(new File("archivo.xml"));
-          
-          
-          
-          // Si se quiere mostrar por la consola...
-          // StreamResult result = new StreamResult(System.out);
-
-          transformer.transform(source, result);
-
-          System.out.println("File saved!");
-
-          } catch (ParserConfigurationException pce) {
-                  pce.printStackTrace();
-          } catch (TransformerException tfe) {
-                  tfe.printStackTrace();
-          }
-   return datos;
-    }*/
-        
+    public String createFile(LoanDTO loanDTO) {
         DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance(); 
         DocumentBuilder db; 
         try {
@@ -123,25 +37,46 @@ public class XMLFileStrategy implements SaveStrategy{
         Document dct; 
         try {
             dct = db.parse("C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml");
-            Element child1 = dct.createElement("Banco"); 
-        //	Get the root node so we can explore its children 
-
-            Element root = dct.getDocumentElement(); 
+            Element child1 = dct.createElement("Cliente"); 
+            Element root = dct.getDocumentElement();
             root.appendChild(child1); 
             // Get the element from the user.. 
-            Text banco = dct.createTextNode("Nacional"); 
+            Text dueno = dct.createTextNode(loanDTO.getOwner()); 
             // Append the element to existing XML file 
-            root.getLastChild().appendChild(banco);
+            root.getLastChild().appendChild(dueno);
             //agregamos nuevo elemento
-            Element moneda = dct.createElement("Moneda");
-            root.appendChild(moneda);
-            Text tipoMoneda = dct.createTextNode("Dolares");
-            root.getLastChild().appendChild(tipoMoneda);
-
+            Element montoAhorro = dct.createElement("MontoPrestamo");
+            root.appendChild(montoAhorro);
+            Double amount = loanDTO.getAmount();
+            Text monto = dct.createTextNode(amount.toString());
+            root.getLastChild().appendChild(monto);
+            
+            Element plazoInversion = dct.createElement("PlazoPrestamo");
+            root.appendChild(plazoInversion);
+            int plazo = loanDTO.getTerm();
+            Text plazoInv = dct.createTextNode(Integer.toString(plazo));
+            root.appendChild(plazoInv);
+            
+            Element tipoCuenta = dct.createElement("SistemaAmortizacion");
+            root.appendChild(tipoCuenta);
+            Text tipoCuent = dct.createTextNode(loanDTO.getAmortizationSystem());
+            root.appendChild(tipoCuent);
+            
+            Element interesAnual = dct.createElement("InteresAnual");
+            root.appendChild(interesAnual);
+            float interesA = loanDTO.getAnualInterest();
+            Text interes = dct.createTextNode(Float.toString(interesA));
+            root.appendChild(interes);
+            
+            Element tablaCompleta = dct.createElement("TablaAmortizacion");
+            root.appendChild(tablaCompleta);
+            AmortizationTable tab = loanDTO.getTable();
+            Text tablaAmorti = dct.createTextNode(tab.toString(plazo));
+            root.appendChild(tablaAmorti);
 
             // Create blank document 
             Document mainDoc = db.newDocument(); 
-            Element root1 = mainDoc.createElement("Root");
+            Element root1 = mainDoc.createElement("DatosCliente");
             mainDoc.appendChild(root1);
             
 
@@ -170,7 +105,7 @@ public class XMLFileStrategy implements SaveStrategy{
 
 
 
-            return datos;
+            return loanDTO.getOwner();
         } 
      } 
 

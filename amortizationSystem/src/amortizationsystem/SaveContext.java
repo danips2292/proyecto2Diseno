@@ -19,7 +19,7 @@ public class SaveContext {
         this.strategy = strategy;
     }
     
-    public String executeStrategy(String datos){
-        return strategy.createFile(datos);
+    public String executeStrategy(LoanDTO loanDTO){
+        return strategy.createFile(loanDTO);
     }
 }

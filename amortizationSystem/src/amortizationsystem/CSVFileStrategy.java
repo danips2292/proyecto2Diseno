@@ -5,7 +5,6 @@
  */
 package amortizationsystem;
 
-import com.opencsv.CSVWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -23,7 +22,7 @@ import java.util.logging.Logger;
 public class CSVFileStrategy implements SaveStrategy {
 
     @Override
-    public String createFile(String datos) {
+    public String createFile(LoanDTO loanDTO) {
         
         /*String COMMA_DELIMITER = ",";
         String NEW_LINE_SEPARATOR = "\n";
@@ -57,10 +56,10 @@ public class CSVFileStrategy implements SaveStrategy {
                 }
                 csvWriter = new  PrintWriter(new FileWriter(file,true));
 
-
-                csvWriter.print(datos+","+"nice");
+                AmortizationTable tab = loanDTO.getTable();
+                csvWriter.print("Cliente "+loanDTO.getOwner()+","+" Currency "+loanDTO.getCurrency()+","+" Amount "+loanDTO.getAmount()+ "," + " AnualInterest " + loanDTO.getAnualInterest() + "," + " Term " + loanDTO.getTerm()+","+" Armotization " + loanDTO.getAmortizationSystem()+","+" Table "+tab.toString(loanDTO.getTerm()));
                 csvWriter.append("\r\n");
-                csvWriter.print("world");
+                //csvWriter.print("world");
 
 
                 csvWriter.close();
@@ -72,7 +71,7 @@ public class CSVFileStrategy implements SaveStrategy {
                 e.printStackTrace();
             }
          
-        return datos;
+        return loanDTO.getCurrency();
         
      }
 }

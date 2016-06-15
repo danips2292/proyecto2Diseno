@@ -12,5 +12,5 @@ import java.util.ArrayList;
  * @author Daniel
  */
 public interface SaveStrategy {
-    public String createFile(String datos);
+    public String createFile(LoanDTO loanDTO);
 }

@@ -1,57 +1,12 @@
-Prueba,hello
-worldPrueba,hello
-worldPrueba,hello
-worldPrueba,hello
-worldPrueba,hello
-worldPrueba,hello
-worldPrueba,hello
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-worldPrueba,nice
-world
+ClienteBeto, Currency Colons
+Cliente Diego, Currency Colons, Amount 500000.0, AnualInterest 5.0, Term 4, Armotization German, Table amortizationsystem.AmortizationTable@70dea4e
+Cliente Barny, Currency Colons, Amount 2500000.0, AnualInterest 5.0, Term 6, Armotization German, Table Amortization Table
+
+Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
+1		2500000.0		125000.0    		416666.6666666667		541666.6666666667
+2		2083333.3333333333		104166.66666666667    		416666.6666666667		520833.3333333334
+3		1666666.6666666665		83333.33333333333    		416666.6666666667		500000.0
+4		1249999.9999999998		62499.99999999999    		416666.6666666667		479166.6666666667
+5		833333.333333333		41666.66666666666    		416666.6666666667		458333.3333333334
+6		416666.66666666634		20833.333333333318    		416666.6666666667		437500.0
+total					437499.99999999994		2500000.0		2937500.0

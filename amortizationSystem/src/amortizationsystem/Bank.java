@@ -61,6 +61,13 @@ public class Bank {
         tableBuilder.buildTable(loanDTO);
     }
     
+    public void SaveLoan(){
+        SaveContext context2 = new SaveContext(new XMLFileStrategy());
+        System.out.println("Xml Pruebaaaaaa" + context2.executeStrategy(this.loan));
+        SaveContext context = new SaveContext(new CSVFileStrategy());
+        System.out.println("Prueba " + context.executeStrategy(this.loan));
+    }
+    
     public void setAmortizationTable()
     {
         this.loan.setTable( this.tableBuilder.getAmortizationTable());
