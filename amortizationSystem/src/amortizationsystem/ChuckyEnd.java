@@ -49,6 +49,8 @@ public class ChuckyEnd extends ResourceManager{
             
         }// End While
         
+        this.chuckyTime = date;
+        
         return date;
         
     }//End Method

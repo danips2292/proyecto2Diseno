@@ -4,6 +4,8 @@
  */
 package amortizationsystem;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author familia
@@ -17,6 +19,11 @@ public class LoanDTO {
     private String amortizationSystem;
     private String currency;
     private AmortizationTable table;
+    private ArrayList<ResourceManager> resourceManagerList;
+    
+    public LoanDTO(){
+        this.resourceManagerList = new ArrayList();
+    }
     
     public String getOwner() {
         return owner;
@@ -73,4 +80,11 @@ public class LoanDTO {
     public void setTable(AmortizationTable table) {
         this.table = table;
     }
+
+    public ArrayList<ResourceManager> getResourceManagerList() {
+        return resourceManagerList;
+    }
+     
+   
+   
 }

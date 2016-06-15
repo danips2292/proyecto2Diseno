@@ -4,6 +4,8 @@
  */
 package amortizationsystem;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author familia
@@ -14,7 +16,7 @@ public class Bank {
     private LoanDTO loan;
     AmortizationTableBuilder tableBuilder;
     AmortizationTable table;
-    
+            
     public void setInterface(IController pInterface)
     {
         this.userInterface = pInterface;
@@ -72,4 +74,5 @@ public class Bank {
     {
         this.loan.setTable( this.tableBuilder.getAmortizationTable());
     }
+   
 }

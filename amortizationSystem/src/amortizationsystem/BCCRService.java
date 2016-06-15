@@ -23,7 +23,7 @@ import org.xml.sax.InputSource;
  *
  * @author Diego
  */
-public class  BCCRService extends BCCRServiceAdapter{
+public class BCCRService{
 
     private double exchangeBuyRate;
     

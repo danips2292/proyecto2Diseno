@@ -31,6 +31,8 @@ public class ConsoleController implements IController {
         inputLoan.setAnualInterest(consoleView.getAnualInterest());
         inputLoan.setAmortizationSystem(consoleView.getAmortizationSystem());
         inputLoan.setCurrency(consoleView.getCurrency());
+        inputLoan.getResourceManagerList().add(new ChuckyEnd());
+        inputLoan.getResourceManagerList().add(new BCCRServiceAdapter());
         this.loanDTO = inputLoan;
         System.out.println("Console mssg: LoanDTO Wrapped");
     }
