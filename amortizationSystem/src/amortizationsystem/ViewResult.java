@@ -24,6 +24,7 @@ public class ViewResult extends javax.swing.JFrame {
         this.lblLoanType.setText(loan.getAmortizationSystem());
         this.lblresult.setText(loan.getTable().toString(loan.getTerm()));
         
+        
     }
 
     /**
