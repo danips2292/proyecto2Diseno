@@ -10,7 +10,7 @@ package amortizationsystem;
  */
 public abstract class AmortizationTableBuilder {
     
-    protected ExchangeRate exchangeRate;
+    protected BCCRService exchangeRate;
     protected AmortizationTable amortizationTable;
     //protected AmortizationSystemStrategy strategy;
     

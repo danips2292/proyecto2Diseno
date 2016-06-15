@@ -112,11 +112,13 @@ public class ConsoleView {
     public void showResult(LoanDTO loan)
     {
        System.out.println
-               ("Owner: " + loan.getOwner() + "\n" +
+               ("Exchange Rate: " + loan.getResourceManagerList().get(1).getResource() + "\n" +
+                "Owner: " + loan.getOwner() + "\n" +
                 "Amount: " + loan.getAmount() + "\n" +
                 "Term In Years: " + loan.getTerm() + "\n" +
                 "Interest Rate: " + loan.getAnualInterest() + "\n" +
                 "System: " + loan.getAmortizationSystem() + "\n" +
-                "Currency: " + loan.getCurrency() + "\n" + loan.getTable().toString(loan.getTerm()));
+                "Currency: " + loan.getCurrency() + "\n" + loan.getTable().toString(loan.getTerm()) + "\n" +
+                "Chucky Time: " + loan.getResourceManagerList().get(0).getResource() );
     }
 }
