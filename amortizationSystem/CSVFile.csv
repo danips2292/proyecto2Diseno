@@ -1,16 +1,16 @@
-ClienteBeto, Currency Colons
-Cliente Diego, Currency Colons, Amount 500000.0, AnualInterest 5.0, Term 4, Armotization German, Table amortizationsystem.AmortizationTable@70dea4e
-Cliente Barny, Currency Colons, Amount 2500000.0, AnualInterest 5.0, Term 6, Armotization German, Table Amortization Table
+Tipo de Cambio 548.77 BCCR ,Datos del cliente ,Cliente Disney, Currency Dollars, Amount 1000000.0, AnualInterest 6.0, Term 8, Armotization American, Table Amortization Table
 
 Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		2500000.0		125000.0    		416666.6666666667		541666.6666666667
-2		2083333.3333333333		104166.66666666667    		416666.6666666667		520833.3333333334
-3		1666666.6666666665		83333.33333333333    		416666.6666666667		500000.0
-4		1249999.9999999998		62499.99999999999    		416666.6666666667		479166.6666666667
-5		833333.333333333		41666.66666666666    		416666.6666666667		458333.3333333334
-6		416666.66666666634		20833.333333333318    		416666.6666666667		437500.0
-total					437499.99999999994		2500000.0		2937500.0
-Cliente Laura, Currency Colones, Amount 1000000.0, AnualInterest 15.0, Term 5, Armotization German, Table Amortization Table
+1		1000000.0		60000.0    		0.0		60000.0
+2		1000000.0		60000.0    		0.0		60000.0
+3		1000000.0		60000.0    		0.0		60000.0
+4		1000000.0		60000.0    		0.0		60000.0
+5		1000000.0		60000.0    		0.0		60000.0
+6		1000000.0		60000.0    		0.0		60000.0
+7		1000000.0		60000.0    		0.0		60000.0
+8		1000000.0		60000.0    		1000000.0		1060000.0
+total					480000.0		1000000.0		1480000.0
+Tipo de Cambio 548.77 BCCR ,Datos del cliente ,Cliente Agustin Cabeza Composito, Currency Colones, Amount 1000000.0, AnualInterest 15.0, Term 5, Armotization German, Table Amortization Table
 
 Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
 1		1000000.0		150000.0    		200000.0		350000.0
@@ -19,12 +19,21 @@ Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
 4		400000.0		60000.0    		200000.0		260000.0
 5		200000.0		30000.0    		200000.0		230000.0
 total					450000.0		1000000.0		1450000.0
-Cliente Gonzalo, Currency Colones, Amount 1000000.0, AnualInterest 3.0, Term 5, Armotization German, Table Amortization Table
+Tipo de Cambio 548.77 BCCR ,Datos del cliente ,Cliente Agustin Cabeza Compostizo, Currency Colones, Amount 1000000.0, AnualInterest 15.0, Term 5, Armotization French, Table Amortization Table
 
 Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		1000000.0		30000.0    		200000.0		230000.0
-2		800000.0		24000.0    		200000.0		224000.0
-3		600000.0		18000.0    		200000.0		218000.0
-4		400000.0		12000.0    		200000.0		212000.0
-5		200000.0		6000.0    		200000.0		206000.0
-total					90000.0		1000000.0		1090000.0
+1		1000000.0		150000.00596046448    		148315.55071100753		298315.55667147203
+2		851684.4492889924		127752.67246978378    		170562.88420168823		298315.55667147203
+3		681121.5650873042		102168.23882289654    		196147.31784857548		298315.55667147203
+4		484974.24723872874		72746.1399764811    		225569.4166949909		298315.55667147203
+5		259404.83054373783		38910.726127734    		259404.83054373806		298315.55667147203
+total					491577.78335735993		1000000.0000000002		1491577.7833573602
+Tipo de Cambio 548.77 BCCR ,Datos del cliente ,Cliente Agustin Cabeza Compostizo, Currency Colones, Amount 1000000.0, AnualInterest 15.0, Term 5, Armotization American, Table Amortization Table
+
+Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
+1		1000000.0		150000.0    		0.0		150000.0
+2		1000000.0		150000.0    		0.0		150000.0
+3		1000000.0		150000.0    		0.0		150000.0
+4		1000000.0		150000.0    		0.0		150000.0
+5		1000000.0		150000.0    		1000000.0		1150000.0
+total					750000.0		1000000.0		1750000.0
