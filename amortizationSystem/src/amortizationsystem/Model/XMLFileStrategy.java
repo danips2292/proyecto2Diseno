@@ -1,5 +1,5 @@
 
-package amortizationsystem;
+package amortizationsystem.Model;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -36,7 +36,7 @@ public class XMLFileStrategy implements SaveStrategy{
             // Read books.xml file 
         Document dct; 
         try {
-            dct = db.parse("C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml");
+            dct = db.parse("C:\\Users\\aleja\\Desktop\\proyecto2Diseno\\amortizationSystem1\\XMLFile.xml");
             Element child1 = dct.createElement("Cliente"); 
             Element root = dct.getDocumentElement();
             root.appendChild(child1); 

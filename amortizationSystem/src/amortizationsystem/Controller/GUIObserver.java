@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.Controller;
+
+import amortizationsystem.View.ViewGetUserGUI;
 
 /**
  *
- * @author Diego
+ * @author aleja
  */
-public abstract class ResourceManager{
+public interface GUIObserver {
+    public void infoReceived(ViewGetUserGUI view1);
     
-    
-    public abstract String getResource();
-    
-}//End Class
+}

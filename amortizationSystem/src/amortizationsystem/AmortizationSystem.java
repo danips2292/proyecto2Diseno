@@ -4,6 +4,9 @@
  */
 package amortizationsystem;
 
+import amortizationsystem.Controller.ConsoleController;
+import amortizationsystem.Controller.GUIController;
+import amortizationsystem.Model.Bank;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

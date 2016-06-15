@@ -3,8 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package amortizationsystem;
+package amortizationsystem.Controller;
 
+import amortizationsystem.Model.LoanDTO;
+import amortizationsystem.Model.BCCRServiceAdapter;
+import amortizationsystem.Model.ChuckyEnd;
+import amortizationsystem.View.ViewGetUserGUI;
+import amortizationsystem.View.ViewResult;
 import java.util.ArrayList;
 
 /**
