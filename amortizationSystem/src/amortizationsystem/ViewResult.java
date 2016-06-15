@@ -23,7 +23,8 @@ public class ViewResult extends javax.swing.JFrame {
         this.lblName.setText(loan.getOwner());
         this.lblLoanType.setText(loan.getAmortizationSystem());
         this.lblresult.setText(loan.getTable().toString(loan.getTerm()));
-        
+        this.lblExchange.setText(loan.getResourceManagerList().get(1).getResource());
+        this.lblChuckyTime.setText(loan.getResourceManagerList().get(0).getResource());
         
     }
 
@@ -51,6 +52,9 @@ public class ViewResult extends javax.swing.JFrame {
         lblInterestRate = new javax.swing.JLabel();
         lblLoanType = new javax.swing.JLabel();
         lblMoneda = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblExchange = new javax.swing.JLabel();
+        lblChuckyTime = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,6 +101,15 @@ public class ViewResult extends javax.swing.JFrame {
         lblMoneda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblMoneda.setText("NULL");
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel8.setText("Exhcnage Rate");
+
+        lblExchange.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblExchange.setText("NULL");
+
+        lblChuckyTime.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblChuckyTime.setText("NULL");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,6 +123,7 @@ public class ViewResult extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel8)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel3)
@@ -123,7 +137,9 @@ public class ViewResult extends javax.swing.JFrame {
                                     .addComponent(lblTerm)
                                     .addComponent(lblInterestRate)
                                     .addComponent(lblLoanType)
-                                    .addComponent(lblMoneda))))
+                                    .addComponent(lblMoneda)
+                                    .addComponent(lblExchange)))
+                            .addComponent(lblChuckyTime))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -133,6 +149,10 @@ public class ViewResult extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblExchange)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(lblName))
@@ -156,9 +176,11 @@ public class ViewResult extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(lblMoneda))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblChuckyTime)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         pack();
@@ -208,8 +230,11 @@ public class ViewResult extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAmount;
+    private javax.swing.JLabel lblChuckyTime;
+    private javax.swing.JLabel lblExchange;
     private javax.swing.JLabel lblInterestRate;
     private javax.swing.JLabel lblLoanType;
     private javax.swing.JLabel lblMoneda;
