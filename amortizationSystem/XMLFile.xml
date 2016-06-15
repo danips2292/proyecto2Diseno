@@ -4,86 +4,32 @@
 <DatosCliente>
 <DatosCliente>
 <DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<DatosCliente>
-<Cliente>Alejo</Cliente>
-<MontoAhorro>Dolares</MontoAhorro>
-<PlazoInversion>3 meses</PlazoInversion>
-</DatosCliente>
-<Cliente>holaaa</Cliente>
-<MontoAhorro>Jummm</MontoAhorro>
-<PlazoInversion>3 meses</PlazoInversion>
-</DatosCliente>
-<Cliente>Negro</Cliente>
-<MontoAhorro>Colons</MontoAhorro>
-<PlazoInversion>3 meses</PlazoInversion>
-</DatosCliente>
-<Cliente>Arania</Cliente>
-<MontoAhorro>50000.0</MontoAhorro>
-<PlazoInversion>3 meses</PlazoInversion>
-</DatosCliente>
-<Cliente>Barny</Cliente>
-<MontoAhorro>60000.0</MontoAhorro>
-<PlazoInversion>3 meses</PlazoInversion>
-</DatosCliente>
-<Cliente>CArmen</Cliente>
-<MontoPrestamo>100000.0</MontoPrestamo>
-<PlazoPrestamo/>12<SistemaAmortizacion/>
-<InteresAnual/>German<TablaAmortizacion/>amortizationsystem.AmortizationTable@659e0bfd</DatosCliente>
-<Cliente>Marco</Cliente>
-<MontoPrestamo>50000.0</MontoPrestamo>
-<PlazoPrestamo/>6<SistemaAmortizacion/>French<InteresAnual/>4.0<TablaAmortizacion/>Amortization Table
-
-Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		50000.0		1999.9999552965162    		7538.095142339227		9538.095097635744
-2		42461.904857660775		1698.476156342529    		7839.618941293214		9538.095097635744
-3		34622.28591636756		1384.8914056999654    		8153.203691935778		9538.095097635744
-4		26469.082224431782		1058.7632653120668    		8479.331832323676		9538.095097635744
-5		17989.750392108108		719.5899996002327    		8818.505098035512		9538.095097635744
-6		9171.245294072596		366.8498035631705    		9171.245294072573		9538.095097635744
-total					7228.570585814481		49999.99999999998		57228.57058581446</DatosCliente>
-<Cliente>Beto</Cliente>
-<MontoPrestamo>100000.0</MontoPrestamo>
-<PlazoPrestamo/>5<SistemaAmortizacion/>German<InteresAnual/>3.0<TablaAmortizacion/>Amortization Table
-
-Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		100000.0		3000.0    		20000.0		23000.0
-2		80000.0		2400.0    		20000.0		22400.0
-3		60000.0		1800.0    		20000.0		21800.0
-4		40000.0		1200.0    		20000.0		21200.0
-5		20000.0		600.0    		20000.0		20600.0
-total					9000.0		100000.0		109000.0</DatosCliente>
-<Cliente>Diego</Cliente>
-<MontoPrestamo>500000.0</MontoPrestamo>
-<PlazoPrestamo/>4<SistemaAmortizacion/>German<InteresAnual/>5.0<TablaAmortizacion/>Amortization Table
-
-Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		500000.0		25000.0    		125000.0		150000.0
-2		375000.0		18750.0    		125000.0		143750.0
-3		250000.0		12500.0    		125000.0		137500.0
-4		125000.0		6250.0    		125000.0		131250.0
-total					62500.0		500000.0		562500.0</DatosCliente>
-<Cliente>Barny</Cliente>
-<MontoPrestamo>2500000.0</MontoPrestamo>
-<PlazoPrestamo/>6<SistemaAmortizacion/>German<InteresAnual/>5.0<TablaAmortizacion/>Amortization Table
-
-Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		2500000.0		125000.0    		416666.6666666667		541666.6666666667
-2		2083333.3333333333		104166.66666666667    		416666.6666666667		520833.3333333334
-3		1666666.6666666665		83333.33333333333    		416666.6666666667		500000.0
-4		1249999.9999999998		62499.99999999999    		416666.6666666667		479166.6666666667
-5		833333.333333333		41666.66666666666    		416666.6666666667		458333.3333333334
-6		416666.66666666634		20833.333333333318    		416666.6666666667		437500.0
-total					437499.99999999994		2500000.0		2937500.0</DatosCliente>
-<Cliente>Laura</Cliente>
+<Cliente>Disney</Cliente>
+<TipoCambio>548.77 BCCR</TipoCambio>
 <MontoPrestamo>1000000.0</MontoPrestamo>
-<PlazoPrestamo/>5<SistemaAmortizacion/>German<InteresAnual/>15.0<TablaAmortizacion/>Amortization Table
+<PlazoPrestamo>8</PlazoPrestamo>
+<SistemaAmortizacion>American</SistemaAmortizacion>
+<InteresAnual>6.0</InteresAnual>
+<TablaAmortizacion>Amortization Table
+
+Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
+1		1000000.0		60000.0    		0.0		60000.0
+2		1000000.0		60000.0    		0.0		60000.0
+3		1000000.0		60000.0    		0.0		60000.0
+4		1000000.0		60000.0    		0.0		60000.0
+5		1000000.0		60000.0    		0.0		60000.0
+6		1000000.0		60000.0    		0.0		60000.0
+7		1000000.0		60000.0    		0.0		60000.0
+8		1000000.0		60000.0    		1000000.0		1060000.0
+total					480000.0		1000000.0		1480000.0</TablaAmortizacion>
+</DatosCliente>
+<Cliente>Agustin Cabeza Composito</Cliente>
+<TipoCambio>548.77 BCCR</TipoCambio>
+<MontoPrestamo>1000000.0</MontoPrestamo>
+<PlazoPrestamo>5</PlazoPrestamo>
+<SistemaAmortizacion>German</SistemaAmortizacion>
+<InteresAnual>15.0</InteresAnual>
+<TablaAmortizacion>Amortization Table
 
 Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
 1		1000000.0		150000.0    		200000.0		350000.0
@@ -91,16 +37,38 @@ Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
 3		600000.0		90000.0    		200000.0		290000.0
 4		400000.0		60000.0    		200000.0		260000.0
 5		200000.0		30000.0    		200000.0		230000.0
-total					450000.0		1000000.0		1450000.0</DatosCliente>
-<Cliente>Gonzalo</Cliente>
+total					450000.0		1000000.0		1450000.0</TablaAmortizacion>
+</DatosCliente>
+<Cliente>Agustin Cabeza Compostizo</Cliente>
+<TipoCambio>548.77 BCCR</TipoCambio>
 <MontoPrestamo>1000000.0</MontoPrestamo>
-<PlazoPrestamo/>5<SistemaAmortizacion/>German<InteresAnual/>3.0<TablaAmortizacion/>Amortization Table
+<PlazoPrestamo>5</PlazoPrestamo>
+<SistemaAmortizacion>French</SistemaAmortizacion>
+<InteresAnual>15.0</InteresAnual>
+<TablaAmortizacion>Amortization Table
 
 Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
-1		1000000.0		30000.0    		200000.0		230000.0
-2		800000.0		24000.0    		200000.0		224000.0
-3		600000.0		18000.0    		200000.0		218000.0
-4		400000.0		12000.0    		200000.0		212000.0
-5		200000.0		6000.0    		200000.0		206000.0
-total					90000.0		1000000.0		1090000.0</DatosCliente>
+1		1000000.0		150000.00596046448    		148315.55071100753		298315.55667147203
+2		851684.4492889924		127752.67246978378    		170562.88420168823		298315.55667147203
+3		681121.5650873042		102168.23882289654    		196147.31784857548		298315.55667147203
+4		484974.24723872874		72746.1399764811    		225569.4166949909		298315.55667147203
+5		259404.83054373783		38910.726127734    		259404.83054373806		298315.55667147203
+total					491577.78335735993		1000000.0000000002		1491577.7833573602</TablaAmortizacion>
+</DatosCliente>
+<Cliente>Agustin Cabeza Compostizo</Cliente>
+<TipoCambio>548.77 BCCR</TipoCambio>
+<MontoPrestamo>1000000.0</MontoPrestamo>
+<PlazoPrestamo>5</PlazoPrestamo>
+<SistemaAmortizacion>American</SistemaAmortizacion>
+<InteresAnual>15.0</InteresAnual>
+<TablaAmortizacion>Amortization Table
+
+Term k		InitialDept		Interests(sk)		Amortization(vk)	Fee(ck)
+1		1000000.0		150000.0    		0.0		150000.0
+2		1000000.0		150000.0    		0.0		150000.0
+3		1000000.0		150000.0    		0.0		150000.0
+4		1000000.0		150000.0    		0.0		150000.0
+5		1000000.0		150000.0    		1000000.0		1150000.0
+total					750000.0		1000000.0		1750000.0</TablaAmortizacion>
+</DatosCliente>
 </DatosCliente>

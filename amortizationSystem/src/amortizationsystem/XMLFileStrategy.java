@@ -45,6 +45,12 @@ public class XMLFileStrategy implements SaveStrategy{
             // Append the element to existing XML file 
             root.getLastChild().appendChild(dueno);
             //agregamos nuevo elemento
+            
+            Element tipoCambio = dct.createElement("TipoCambio");
+            root.appendChild(tipoCambio);
+            Text tipoC = dct.createTextNode(loanDTO.getResourceManagerList().get(1).getResource()+" BCCR");
+            root.getLastChild().appendChild(tipoC);
+                    
             Element montoAhorro = dct.createElement("MontoPrestamo");
             root.appendChild(montoAhorro);
             Double amount = loanDTO.getAmount();
@@ -55,24 +61,24 @@ public class XMLFileStrategy implements SaveStrategy{
             root.appendChild(plazoInversion);
             int plazo = loanDTO.getTerm();
             Text plazoInv = dct.createTextNode(Integer.toString(plazo));
-            root.appendChild(plazoInv);
+            root.getLastChild().appendChild(plazoInv);
             
             Element tipoCuenta = dct.createElement("SistemaAmortizacion");
             root.appendChild(tipoCuenta);
             Text tipoCuent = dct.createTextNode(loanDTO.getAmortizationSystem());
-            root.appendChild(tipoCuent);
+            root.getLastChild().appendChild(tipoCuent);
             
             Element interesAnual = dct.createElement("InteresAnual");
             root.appendChild(interesAnual);
             float interesA = loanDTO.getAnualInterest();
             Text interes = dct.createTextNode(Float.toString(interesA));
-            root.appendChild(interes);
+            root.getLastChild().appendChild(interes);
             
             Element tablaCompleta = dct.createElement("TablaAmortizacion");
             root.appendChild(tablaCompleta);
             AmortizationTable tab = loanDTO.getTable();
             Text tablaAmorti = dct.createTextNode(tab.toString(plazo));
-            root.appendChild(tablaAmorti);
+            root.getLastChild().appendChild(tablaAmorti);
 
             // Create blank document 
             Document mainDoc = db.newDocument(); 

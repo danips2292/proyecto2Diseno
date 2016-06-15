@@ -57,7 +57,7 @@ public class CSVFileStrategy implements SaveStrategy {
                 csvWriter = new  PrintWriter(new FileWriter(file,true));
 
                 AmortizationTable tab = loanDTO.getTable();
-                csvWriter.print("Cliente "+loanDTO.getOwner()+","+" Currency "+loanDTO.getCurrency()+","+" Amount "+loanDTO.getAmount()+ "," + " AnualInterest " + loanDTO.getAnualInterest() + "," + " Term " + loanDTO.getTerm()+","+" Armotization " + loanDTO.getAmortizationSystem()+","+" Table "+tab.toString(loanDTO.getTerm()));
+                csvWriter.print("Tipo de Cambio "+loanDTO.getResourceManagerList().get(1).getResource()+" BCCR "+","+"Datos del cliente "+","+"Cliente "+loanDTO.getOwner()+","+" Currency "+loanDTO.getCurrency()+","+" Amount "+loanDTO.getAmount()+ "," + " AnualInterest " + loanDTO.getAnualInterest() + "," + " Term " + loanDTO.getTerm()+","+" Armotization " + loanDTO.getAmortizationSystem()+","+" Table "+tab.toString(loanDTO.getTerm()));
                 csvWriter.append("\r\n");
                 //csvWriter.print("world");
 
