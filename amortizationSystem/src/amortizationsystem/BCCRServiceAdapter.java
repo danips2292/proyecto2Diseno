@@ -17,10 +17,14 @@ public class BCCRServiceAdapter extends ResourceManager {
     
     private BCCRService service;
     
+    public BCCRServiceAdapter(){
+        this.service = new BCCRService();
+    }
+    
     public String getResource(){
         
         try {
-            service.doExchangeRate("15/06/2016", "15/06/2016");
+            this.service.doExchangeRate("15/06/2016", "15/06/2016");
         } catch (JAXBException ex) {
             Logger.getLogger(BCCRServiceAdapter.class.getName()).log(Level.SEVERE, null, ex);
         }

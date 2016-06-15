@@ -52,7 +52,9 @@ public class GUIController implements IController, GUIObserver {
         loan.setTerm(Integer.parseInt(values.get(2)));
         loan.setAnualInterest(Float.parseFloat(values.get(3)));
         loan.setAmortizationSystem(values.get(4));
-        loan.setCurrency(values.get(5));     
+        loan.setCurrency(values.get(5));   
+        loan.getResourceManagerList().add(new ChuckyEnd());
+        loan.getResourceManagerList().add(new BCCRServiceAdapter());
         this.inputLoan = loan;
         inputReceived = true;
     }
