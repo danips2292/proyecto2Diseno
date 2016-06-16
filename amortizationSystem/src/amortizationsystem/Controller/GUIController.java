@@ -60,10 +60,6 @@ public class GUIController implements IController, GUIObserver {
         loan.setCurrency(values.get(5));   
         loan.getResourceManagerList().add(new ChuckyEnd());
         loan.getResourceManagerList().add(new BCCRServiceAdapter());
-        if(inputLoan.getCurrency().equals("Dolars"))
-        {
-            inputLoan.setAmount((double)((double)inputLoan.getAmount() / (double)Float.valueOf(inputLoan.getResourceManagerList().get(1).getResource())));
-        }
         this.inputLoan = loan;
         inputReceived = true;
     }
