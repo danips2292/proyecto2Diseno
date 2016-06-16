@@ -101,7 +101,7 @@ public class ConsoleView {
             System.out.print("Your Choose: ");
             this.setAmortizationSystem(input.readLine());
             System.out.println("");
-            System.out.println("Currency : Colons/Dolars ");
+            System.out.println("Currency : Colons/Dollars ");
             System.out.print("Your Choose: ");
             this.setCurrency(input.readLine());
             System.out.println("");

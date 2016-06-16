@@ -31,6 +31,10 @@ public class Bank {
     {
         
         this.loan = this.userInterface.getLoanDTO();
+        if(this.loan.getCurrency().equals("Dollars"))
+        {
+            this.loan.setAmount((double)((double)this.loan.getAmount() / (double)Float.valueOf(this.loan.getResourceManagerList().get(1).getResource())));
+        }
     }
     
     public void showLoanData()
