@@ -29,7 +29,6 @@ public class ChuckyEnd extends ResourceManager{
         
         final String host = "localhost";
         final int portNumber = 8666;
-        System.out.println("Creating socket to '" + host + "' on port " + portNumber);
 
         while (true) {
             try {
