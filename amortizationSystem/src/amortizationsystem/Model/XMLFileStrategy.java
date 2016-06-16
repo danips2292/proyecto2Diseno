@@ -36,7 +36,8 @@ public class XMLFileStrategy implements SaveStrategy{
             // Read books.xml file 
         Document dct; 
         try {
-            dct = db.parse("C:\\Users\\aleja\\Desktop\\proyecto2Diseno\\amortizationSystem1\\XMLFile.xml");
+            //dct = db.parse("C:\\Users\\aleja\\Desktop\\proyecto2Diseno\\amortizationSystem1\\XMLFile.xml");
+            dct = db.parse("C:\\Users\\familia\\Beto\\Cursos\\I Semestre 2016\\Diseño de Software\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml");
             Element child1 = dct.createElement("Cliente"); 
             Element root = dct.getDocumentElement();
             root.appendChild(child1); 
@@ -93,7 +94,8 @@ public class XMLFileStrategy implements SaveStrategy{
 
             Transformer transformer = TransformerFactory.newInstance().newTransformer(); 
             transformer.setOutputProperty(OutputKeys.INDENT, "yes"); 
-            StreamResult result = new StreamResult(new FileWriter("C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml")); 
+            //StreamResult result = new StreamResult(new FileWriter("C:\\Users\\Daniel\\Documents\\TEC\\I Semestre 2016\\Diseno\\Proyecto2\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml"));
+            StreamResult result = new StreamResult(new FileWriter("C:\\Users\\familia\\Beto\\Cursos\\I Semestre 2016\\Diseño de Software\\proyecto2Diseno\\amortizationSystem\\XMLFile.xml"));
             DOMSource source = new DOMSource(mainDoc); 
             transformer.transform(source, result); 
             System.out.println("File saved!"); 

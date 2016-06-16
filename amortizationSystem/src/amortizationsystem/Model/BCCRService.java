@@ -34,10 +34,6 @@ public class BCCRService{
         
         try {
         
-        String indicador = "318"; // 317-Compra de Dolares 318-Venta de Dolares
-        String fechaInicio = "2016/06/14";
-        String fechaFinal = "2016/06/14";
-        
         String url = 
                 "http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx/"
                 + "ObtenerIndicadoresEconomicosXML?tcIndicador="+pIndicador+"&tcFechaInicio="+pFechaInicio+"&tcFechaFinal="+pFechaFinal+"&tcNombre=S&tnSubNiveles=S";
@@ -73,7 +69,6 @@ public class BCCRService{
         for (String value: values){
             if (value.startsWith("<NUM_VALOR>")){
                 String[] cutA = value.split(">");
-                System.out.println(cutA[1].split("<")[0]);
                 Exchange = cutA[1].split("<")[0];
             }
         }
